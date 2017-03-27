@@ -12,7 +12,6 @@ TARGET = difa
 TEMPLATE = app
 CONFIG += console
 
-
 SOURCES += main.cpp\
         mainwindow.cpp \
     symb/src/array.cpp \
@@ -73,5 +72,12 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-RESOURCES += \
-    wa.qrc
+RESOURCES +=
+
+QT_CONFIG -= no-pkg-config
+CONFIG += link_pkgconfig
+PKGCONFIG += cln
+
+mac {
+	  PKG_CONFIG = /usr/local/bin/pkg-config
+}

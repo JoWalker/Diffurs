@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>587</width>
-    <height>470</height>
+    <width>499</width>
+    <height>282</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,16 +45,6 @@
     </item>
     <item>
      <property name="text">
-      <string>Линейное неоднородное ДУ I порядка</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>ДУ Бернулли I порядка</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>Уравнение в полных дифференциалах I порядка</string>
      </property>
     </item>
@@ -62,8 +52,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>320</y>
+      <x>150</x>
+      <y>170</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -81,10 +71,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>401</width>
-      <height>161</height>
+      <x>30</x>
+      <y>90</y>
+      <width>461</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -104,23 +94,17 @@
      <string>Введите уравнение:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="version">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>210</y>
-      <width>251</width>
-      <height>191</height>
+      <x>470</x>
+      <y>230</y>
+      <width>31</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="wa.qrc">:/1.jpg</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -129,7 +113,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>587</width>
+     <width>499</width>
      <height>22</height>
     </rect>
    </property>
@@ -145,8 +129,6 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="wa.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

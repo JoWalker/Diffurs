@@ -8,13 +8,17 @@
 #include <string>
 #include <QPixmap>
 
+const QString version = "2.1";
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::Start);
-    ui->label_3->hide();
+    ui->label_2->hide();
+    setWindowTitle("Решение дифференциальных уравнений");
+    ui->version->setText("v"+version);
 }
 
 MainWindow::~MainWindow()
@@ -132,7 +136,8 @@ void MainWindow::Simple_DU()
              QString sss;
              sss = QString::fromStdString(hh);
              ui->label->setText("y = " + sss + " + c");
-             ui->label_3->show();
+             ui->label_2->show();
+
 }
 
 void MainWindow::Multiple_DU()
@@ -179,23 +184,13 @@ void MainWindow::Multiple_DU()
          hh = gg.str();
          QString sx = QString::fromStdString(hh);
          ui->label->setText(sy + "=" + sx + "+c2-c1");
-         ui->label_3->show();
+         ui->label_2->show();
 
-}
-
-void MainWindow::Line_DU()
-{
-    ui->label->setText("Здесь могла быть ваша математика по ЛайнДу");
-}
-
-void MainWindow::Bernulli_DU()
-{
-    ui->label->setText("Здесь могла быть ваша математика по БернуллиДу (Верблюжий регистр)");
 }
 
 void MainWindow::Full_DU()
 {
-    ui->label->setText("Здесь могла быть ваша математика по ФулДу");
+    ui->label->setText("Здесь могла быть ваша математика");
 }
 
 void MainWindow::Start()
@@ -206,12 +201,7 @@ void MainWindow::Start()
     if (ui->comboBox->currentText() == "ДУ с разделяющимися переменными I порядка")
         Multiple_DU();
 
-    if (ui->comboBox->currentText() == "Линейное неоднородное ДУ I порядка")
-        Line_DU();
-
-    if (ui->comboBox->currentText() == "ДУ Бернулли I порядка")
-        Bernulli_DU();
-
     if (ui->comboBox->currentText() == "Уравнение в полных дифференциалах I порядка")
         Full_DU();
+
 }
